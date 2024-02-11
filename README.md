@@ -1,70 +1,53 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Wordverse
 
-## Available Scripts
+A virtual platform for people to connect and learn different languages.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Scope
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In a rapidly globalizing society where the ability to speak and understand multiple languages is increasingly vital, traditional language courses prove expensive, inflexible, and inaccessible to many. Challenges such as finding native speakers for practice and the lack of convenient, affordable options hinder individuals from achieving their language learning goals. Recognizing these obstacles, there is a pressing need for a creative solution. Our innovative language learning platform aims to bridge linguistic barriers by connecting language enthusiasts worldwide. By offering an affordable, flexible, and motivating virtual space for learners and speakers of diverse backgrounds, we aspire to unlock the full potential of language education, fostering cross-border communication and cultural understanding.
 
-### `npm test`
+To solve this problem, we a team of 6 members are developing a platform to provided a solution with features such as :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features currently in development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Login and SignUp pages:
+Implementing a  secure entry point where users authenticate by providing credentials to access their accounts and a gateway for new users to create accounts, collecting essential information for account creation and platform exploration.
 
-### `npm run eject`
+- Home Page and language selection :
+Implementing the home page, focusing on the learning section to display learning materials
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Levelling System and tasks: 
+Including a levelling system where users need to complete a certain number of tasks or goals from one level to proceed to the next level to encourage consistent engagement and learning.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Quiz system and grading: 
+Implementing the quiz system by creating quizzes, recording user responses, and providing instant feedback.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Badge System and Progress Page:
+Implementing the badge system and progress page for awarding badges based on user achievements and for users to view their progress.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- User notification features:
+Developing the  logic for sending notifications when handling rewards and completing tasks.
 
-## Learn More
+- Analytics and Insights:
+Implementing analytics tools to gather data on user engagement, popular learning materials.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- User Profile generation for each user:
+Users can create profiles with information about their language proficiency and learning goals. They can also add personal interests and hobbies.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+ 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Team
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [@dilmiBalasooriya](https://github.com/dilmiBalasooriya)
+- [@eazerabi](https://github.com/eazerabi)
+- [@JineshiW](https://github.com/JineshiW)
+- [@Omega-sama](https://github.com/Omega-sama)
+- [@SanithAnusara](https://github.com/SanithAnusara)
+- [@zahan001](https://github.com/zahan001)
