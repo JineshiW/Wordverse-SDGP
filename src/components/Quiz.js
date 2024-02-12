@@ -2,9 +2,12 @@ import React from 'react'
 
 export default function Quiz() {
 
+  // next button event handler
   function onNext(){
     console.log('On next click')
   }
+
+  // prev button event handler
   function onPrev(){
     console.log('On prev click')
   }
