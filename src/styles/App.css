@@ -22,9 +22,9 @@ body, html{
 .container{
   display: block;
   position: relative;
-  margin: 40px auto;
+  margin:  auto;
   height: auto;
-  width: 800px;
+  width: 85%;
   padding: 20px;
 }
 

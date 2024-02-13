@@ -1,4 +1,5 @@
 import React from 'react'
+import Questions from './Questions';
 
 export default function Quiz() {
 
@@ -17,6 +18,7 @@ export default function Quiz() {
       <h1 className='title text-light'>Quiz Game</h1>
 
       {/* display questions */}
+      <Questions></Questions>
 
       {/* adding buttons for next and previous */}
       <div className='grid'>
