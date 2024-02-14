@@ -20,11 +20,16 @@ export default function Main() {
 
         <form id='form'>
             <input ref={inputRef} className='userid' type='text' placeholder='Username*'/>
-        </form>
+        </form>       
 
         <div className='start'>
             {/* directing routing path to quiz though Link component */}
             <Link className='btn' to={'quiz'}> Start Quiz</Link>
+        </div>
+
+        <div className='quit'>
+            {/* directing routing path to quiz though Link component */}
+            <Link className='btn' to={'quiz'}> End Quiz</Link>
         </div>
 
     </div>

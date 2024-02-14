@@ -3,10 +3,10 @@
     color: #cecece;
 }
 
-.start{
+.start, .quit{
     display: flex;
     justify-content: center;
-    padding-top: 2em;
+    padding-top: 20px;
 }
 
 .start .btn{
@@ -17,6 +17,21 @@
     color: #202020;
     text-decoration: none;
     background-color: #25e1de;
+}
+
+.quit .btn{
+    padding: .2em 1.7em;
+    border: none;
+    border-radius: .1em;
+    font-size: 1.2em;
+    color: #202020;
+    text-decoration: none;
+    background-color: #e13e25;
+}
+
+.quit .btn, 
+.start .btn{
+    margin: 0 10px;
 }
 
 #form{
