@@ -11,38 +11,38 @@ export default [
     },
     {
         id: 2,
-        question : "Following methods can be used to display data in some form using Javascript",
+        question : "Question 2",
         options : [
-            'document.write()',
-            'console.log()',
-            'window.alert()',
+            'answer 1',
+            'answer 2',
+            'answer 3',
         ]
     },
     {
         id: 3,
-        question : "When an operator value is NULL, the typeof returned by the unary operator is:",
+        question : "question 3",
         options : [
-            'Boolean',
-            'Undefined',
-            'Object',
+            'answer 1',
+            'answer 2',
+            'answer 3',
         ]
     },
     {
         id: 4,
-        question : "What does the toString() method return?",
+        question : "question 4",
         options : [
-            'Return Object',
-            'Return String',
-            'Return Integer'
+            'answer 1',
+            'answer 2',
+            'answer 3',
         ]
     },
     {
         id: 5,
-        question : "Which function is used to serialize an object into a JSON string?",
+        question : "question 5",
         options : [
-            'stringify()',
-            'parse()',
-            'convert()',
+            'answer 1',
+            'answer 2',
+            'answer 3',
         ]
     }
 ]
