@@ -22,7 +22,7 @@ body, html{
 .container{
   display: block;
   position: relative;
-  margin:  auto;
+  margin: 40px auto;
   height: auto;
   width: 85%;
   padding: 20px;
