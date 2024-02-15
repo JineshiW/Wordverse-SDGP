@@ -12,6 +12,8 @@ export default function Questions() {
         console.log(question)
     })
 
+    
+    // creating onSelect fuction
     function onSelect() {
         console.log('radio button change');
     }
