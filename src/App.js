@@ -16,20 +16,30 @@ function App() {
           <div className='Box11'></div>
           <div className='Box12'></div>
           <div className='Box13'></div>
-        </div>
+        </div> 
       </div>
       <div className='Box3'>
-        <h3>Bio...</h3>
+        <h3>Box3</h3>
       </div>
       <div className='Box4'>
-        <h3>Level...</h3>
+        <h3>Box4</h3>
       </div>
       <div className='Box5'>
-        <h3>Goals...</h3>
+        <h3>Box5</h3>
       </div>
       <div className='Box6'>
-        <h3>Language skills...</h3>
+        <h3>Box6</h3>
       </div>
+      <div className='Box14'>
+        <h3>Box14</h3>
+      </div>
+      <div className='Box15'>
+        <h3>Box15</h3>
+      </div>
+      <div className='Box16'>
+        <h3>Box16</h3>
+      </div>
+      
     </div>
     
   );
