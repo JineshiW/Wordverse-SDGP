@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Result.css'
 import {Link} from 'react-router-dom';
+import ResultTable from './ResultTable';
 
 export default function Result() {
 
@@ -38,10 +39,15 @@ export default function Result() {
           <span className='bold'>Passed</span>
         </div>
       </div>
-      
+
       <div className="start">
         {/* navigate user to restart the quiz */}
         <Link className='btn' to={'/'} onClick={onRestart}>Restart</Link>
+      </div>
+
+      <div className='container'>
+        {/* result table */}
+        <ResultTable></ResultTable>
       </div>
     </div>
   )
