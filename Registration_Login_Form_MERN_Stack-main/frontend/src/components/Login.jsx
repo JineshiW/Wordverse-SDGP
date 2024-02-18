@@ -1,8 +1,11 @@
+// Import necessary dependencies and styles
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
     const [email, setEmail] = useState();
@@ -30,7 +33,7 @@ const Login = () => {
 
     return (
         <div>
-            <div className="d-flex justify-content-center align-items-center text-center vh-100" style= {{backgroundImage : "linear-gradient(#ffcc66, #ff9933,rgba(255, 140, 26))"}}>
+            <div className="d-flex justify-content-center align-items-center text-center vh-100" style= {{backgroundImage: "linear-gradient(to right, #000080, #000000)", color: "white"}}>
                 <div className="bg-white p-3 rounded" style={{width : '40%'}}>
                     <h2 className='mb-3 text-primary'>Login</h2>
                     <form onSubmit={handleSubmit}>
