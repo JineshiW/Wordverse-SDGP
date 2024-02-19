@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import Questions from './Questions';
-
-// reduc store import
+// redux store import
 import {useSelector} from 'react-redux';
 
 export default function Quiz() {
@@ -9,6 +8,7 @@ export default function Quiz() {
   const state = useSelector(state => state)
 
   useEffect(() =>{
+    // get the initial value of the queue
     console.log(state)
   })
   

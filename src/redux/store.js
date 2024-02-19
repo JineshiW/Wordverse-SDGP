@@ -3,14 +3,14 @@ import { combineReducers, configureStore} from '@reduxjs/toolkit';
 
 // call reducers
 import questionReducer from './questionReducer';
-import { resultReducer } from './resultReducer';
+import  resultReducer from './resultReducer';
 
 // combining reducers with combineReducers function 
 const rootReducer = combineReducers({
     // initializing questions property with questionReducer
     questions: questionReducer,
     // initializing result property with resultReducer
-    // result: resultReducer
+    result: resultReducer
 })
 
 // create store with reducer
