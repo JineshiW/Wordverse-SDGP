@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
 import Questions from './Questions';
+import { MoveNextQuestion } from '../hooks/fetchQuestion';
+
 // redux store import
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
 export default function Quiz() {
 
-  const state = useSelector(state => state)
+  const state = useSelector(state => state.questions.trace);
+  const dispatch =useDispatch()
 
   useEffect(() =>{
     // get the initial value of the queue
@@ -15,6 +18,8 @@ export default function Quiz() {
   // next button event handler
   function onNext(){
     console.log('On next click')
+    // update the trace value by one using MoveNextQuestion
+    dispatch(MoveNextQuestion())
   }
 
   // prev button event handler

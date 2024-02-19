@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import data from '../database/data';
 import { useSelector } from 'react-redux';
 
 // importing custom hook
@@ -9,14 +8,14 @@ export default function Questions() {
 
     const [checked, setChecked] = useState(undefined);
     const [{isLoading, apiData, serverError}] = useFetchQuestion()
-    const question= data[0]
 
-    const questions = useSelector(state => state.questions.queue[0])
+    const questions = useSelector(state => state.questions.queue[state.questions.trace])
+    const trace = useSelector(state => state.questions.trace)
 
     // creating useEffect react Hook
     useEffect(() =>{
         // get the initial value of the queue
-        console.log(questions)
+        // console.log(questions)
     })
         
     // creating onSelect fuction
@@ -29,13 +28,13 @@ export default function Questions() {
     
     return (
         <div className='questions'>
-            <h2 className='text-light'>{question.question}</h2>
+            <h2 className='text-light'>{questions?.question}</h2>
 
-            <ul key={question.id}> 
+            <ul key={questions?.id}> 
 
                 {
                     // using map function to iterate through the array of options
-                    question.options.map((q,i)=> (
+                    questions?.options.map((q,i)=> (
                         <li key={i}>
                             <input
                                 type='radio'
