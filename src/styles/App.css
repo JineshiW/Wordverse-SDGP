@@ -1,19 +1,15 @@
-/* importing google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-/* custom style prperties */
 :root{
   --primary-color: #0ddfff;
   --dark-color:#222222;
   --light-color: #f0f0f0;
 }
 
-
 body, html{
   height: 100%;
   background: var(--dark-color)
 }
-
 
 * > *{
     font-family: 'Poppins', sans-serif;
@@ -22,9 +18,9 @@ body, html{
 .container{
   display: block;
   position: relative;
-  margin: auto;
+  margin: 40px auto;
   height: auto;
-  width: 85%;
+  width: 800px;
   padding: 20px;
 }
 
@@ -85,8 +81,8 @@ body, html{
 }
 
 .prev{
-    background-color: #ff99d1;
-    justify-self: flex-start;
+  background-color: #ff99d1;
+  justify-self: flex-start;
 }
 
 ul li{

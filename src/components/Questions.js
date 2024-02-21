@@ -41,7 +41,7 @@ export default function Questions() {
                                 value={false}
                                 name='options'
                                 id={'q${i}-option'}
-                                onChange={onSelect}  
+                                onChange={onSelect()}  
                             />
                             {/* to display all the options of the question */}
                             <label className='text-primary' htmlFor={'q${i}-option'}>{q}</label>
@@ -50,7 +50,8 @@ export default function Questions() {
                     ))
                 }
 
-            </ul> 
+            </ul>
+
         </div>
-    );
+    )
 }

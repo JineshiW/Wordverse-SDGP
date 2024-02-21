@@ -36,10 +36,23 @@ export const useFetchQuestion =()=>{
     return [getData, setGetData];
 }
 
-// MoveAction Dispatch Function
+// MoveAction Dispatch Functions
+
+// moveNextQuestion is increasing the tracevalue by 1 to travel forward to next question
 export const MoveNextQuestion =()=> async(dispatch)=>{
     try{
         dispatch(Action.moveNextAction())
+    }catch(error){
+        console.log(error)
+    }
+}
+
+// PrevAction Dispatch Function
+
+// movePrevQuestion is decreasing the tracevalue by 1 to travel backward to previous question
+export const MovePrevQuestion =()=> async(dispatch)=>{
+    try{
+        dispatch(Action.movePrevAction())
     }catch(error){
         console.log(error)
     }
