@@ -5,6 +5,13 @@ export const MenuItems = [
         cName: "nav-links",
         icon: "fa-solid fa-house"
     },
+    
+    {
+        title: "Course",
+        url: "/service",
+        cName: "nav-links",
+        icon: "fa-solid fa-briefcase" 
+    },
     {
         title: "About",
         url: "/about",
@@ -12,18 +19,12 @@ export const MenuItems = [
         icon: "fa-solid fa-circle-info"
     }, 
     {
-        title: "Service",
-        url: "/service",
-        cName: "nav-links",
-        icon: "fa-solid fa-briefcase" 
-    },
-    {
         title: "Contact",
         url: "/contact",
         cName: "nav-links",
         icon: "fa-solid fa-address-book"
     },
-    
+  
     {
         title: "Sign Up",
         url: "/signup",

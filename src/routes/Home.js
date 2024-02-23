@@ -1,5 +1,9 @@
+import Destination from "../Components/Destination";
+import Footer from "../Components/Footer";
 import Hero from "../Components/Hero"
 import Navbar from "../Components/Navbar"
+import Course from "../Components/Course";
+import HomeImg from "../assets/Home.jpg"
 
 function Home (){
     return(
@@ -7,13 +11,16 @@ function Home (){
         <Navbar/>
         <Hero
             cName = "hero"
-            heroImg ="https://images.unsplash.com/photo-1586016413664-864c0dd76f53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-            title = "Your Journey Your Story"
-            text = "Choose Your Favourite Destination."
-            buttonText ="Travel Plan"
+            heroImg ={HomeImg}
+            title = "Which Language do you want to learn"
+            text = "Level up your Language skills through the continuous learning."
+            buttonText ="View Courses"
             url = "/"
             btnClass = "show"
         />
+        <Destination />
+        <Course />
+        <Footer />
         </>
     )
 }

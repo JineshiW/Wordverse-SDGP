@@ -1,10 +1,26 @@
-import Navbar from "../Components/Navbar"
+import Hero from "../Components/Hero";
+import Navbar from "../Components/Navbar";
+import AboutImg from "../assets/about.jpg";
+import Footer from "../Components/Footer";
+import AboutUs from "../Components/AboutUs";
 
 function About (){
     return(
         <>
         <Navbar/>
-         <h1> This is About</h1>
+        <Hero
+            cName = "hero-mid"
+            heroImg ={AboutImg}
+            title = "About"
+
+
+            btnClass = "hide"
+           
+        />
+
+        <AboutUs />
+         <Footer />
+
         </>
     )
 }
