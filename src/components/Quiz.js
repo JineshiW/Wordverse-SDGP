@@ -4,6 +4,7 @@ import { MoveNextQuestion, MovePrevQuestion } from '../hooks/fetchQuestion';
 
 // redux store import
 import {useSelector, useDispatch} from 'react-redux';
+import { PushAnswer } from '../hooks/setResult';
 
 export default function Quiz() {
 
@@ -13,7 +14,7 @@ export default function Quiz() {
 
   useEffect(() =>{
     // get the initial value of the queue
-    console.log(state)
+    // console.log(state)
   })
   
   // next button event handler
@@ -23,8 +24,10 @@ export default function Quiz() {
     if(trace< queue.length){
       // update the trace value by one using MoveNextQuestion
       dispatch(MoveNextQuestion())
+
+      dispatch(PushAnswer(1))
     }
-    
+
   }
 
   // prev button event handler

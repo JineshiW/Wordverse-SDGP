@@ -15,7 +15,7 @@ export default function Questions() {
     // creating useEffect react Hook
     useEffect(() =>{
         // get the initial value of the queue
-        // console.log(questions)
+        console.log(questions)
     })
         
     // creating onSelect fuction
