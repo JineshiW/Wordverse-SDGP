@@ -7,7 +7,7 @@ import Main from './Main';
 import Quiz from './Quiz';
 import Result from './Result';
 
-// react routes for main page, quiz page and result page
+/** react routes for main page , quiz page and result page*/
 const router = createBrowserRouter([
   {
     path : '/',

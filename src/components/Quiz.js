@@ -19,7 +19,7 @@ export default function Quiz() {
   
   // next button event handler
   function onNext(){
-    console.log('On next click')
+    // console.log('On next click')
     // MoveNextQuestion wil work only if trace is less than queue.length
     if(trace< queue.length){
       // update the trace value by one using MoveNextQuestion
