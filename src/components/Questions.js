@@ -14,7 +14,7 @@ export default function Questions({onChecked}) {
    
     // creating useEffect react Hook
     useEffect(() => {
-        console.log(questions)
+        // console.log(questions)
     })
     
     // creating onSelect fuction

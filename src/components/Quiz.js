@@ -17,7 +17,7 @@ export default function Quiz() {
 
   useEffect(() =>{
     // get the initial value of the queue
-    // console.log(state)
+    console.log(result)
   })
   
   // next button event handler
@@ -48,7 +48,7 @@ export default function Quiz() {
   }
 
   // finishing quiz after last question
-  if(result.length && result.length >=trace){
+  if(result.length && result.length >=queue.length){
     return <Navigate to={'/result'} replace='true'/>
   }
 
