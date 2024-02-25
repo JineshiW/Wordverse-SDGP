@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Main from './Main';
 import Quiz from './Quiz';
 import Result from './Result';
+import Levels from './Levels';
 
 /** react routes for main page , quiz page and result page*/
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
   {
     path : '/result',
     element : <Result></Result>
+  },
+  {
+    path : '/level',
+    element : <Levels></Levels>
   },
 ])
 

@@ -29,7 +29,7 @@ export default function Main() {
         {/* directing routing path out of quiz though Link component */}
 
         <div className='quit'>
-            <Link className='btn' to={'quiz'}> End Quiz</Link>
+            <Link className='btn' to={'level'}> End Quiz</Link>
         </div>
     </div>
   )

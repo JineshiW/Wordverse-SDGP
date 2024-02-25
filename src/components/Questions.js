@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 // importing custom hook
 import { useFetchQuestion } from '../hooks/fetchQuestion'
 
-export default function Questions() {
+export default function Questions({onChecked}) {
 
     const [checked, setChecked] = useState(undefined)
     const [{ isLoading, apiData, serverError}] = useFetchQuestion() 
@@ -14,12 +14,12 @@ export default function Questions() {
    
     // creating useEffect react Hook
     useEffect(() => {
-        // console.log(questions)
+        console.log(questions)
     })
     
     // creating onSelect fuction
-    function onSelect(){
-        console.log('radio button change')
+    function onSelect(i){
+        onChecked(i)
     }
 
 
@@ -39,7 +39,7 @@ export default function Questions() {
                             value={false}
                             name="options"
                             id={`q${i}-option`}
-                            onChange={onSelect}
+                            onChange={() => onSelect(i)}
                         />
                          {/* to display all the options of the question */}
                         <label className='text-primary' htmlFor={`q${i}-option`}>{q}</label>
