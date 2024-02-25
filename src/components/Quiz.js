@@ -28,7 +28,11 @@ export default function Quiz() {
       // update the trace value by one using MoveNextQuestion
       dispatch(MoveNextQuestion())
 
-      dispatch(PushAnswer(check))
+      // inserting a new result in the array
+      if(result.length<=trace){
+        dispatch(PushAnswer(check))
+
+      }
     }
 
   }
