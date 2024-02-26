@@ -14,11 +14,6 @@ export default function Quiz() {
   const result = useSelector(state => state.result.result);
   const {queue, trace} = useSelector(state => state.questions);
   const dispatch =useDispatch()
-
-  useEffect(() =>{
-    // get the initial value of the queue
-    console.log(result)
-  })
   
   // next button event handler
   function onNext(){
@@ -35,11 +30,12 @@ export default function Quiz() {
       }
     }
 
+    // reset the value of the checked variable
+    setChecked(undefined)
   }
 
   // prev button event handler
   function onPrev(){
-    console.log('On prev click')
     if(trace>0){
       // decrease the trace value by one using MoveNextQuestion
       dispatch(MovePrevQuestion())
