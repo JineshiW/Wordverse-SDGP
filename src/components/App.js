@@ -7,6 +7,7 @@ import Main from './Main';
 import Quiz from './Quiz';
 import Result from './Result';
 import Levels from './Levels';
+import { CheckUserExist } from '../helper/helper';
 
 /** react routes for main page , quiz page and result page*/
 const router = createBrowserRouter([
@@ -16,11 +17,11 @@ const router = createBrowserRouter([
   },
   {
     path : '/quiz',
-    element : <Quiz></Quiz>
+    element : <CheckUserExist><Quiz/></CheckUserExist>
   },
   {
     path : '/result',
-    element : <Result></Result>
+    element : <CheckUserExist><Result/></CheckUserExist>
   },
   {
     path : '/level',
