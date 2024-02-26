@@ -10,6 +10,7 @@ export default function Questions({onChecked}) {
 
     const [checked, setChecked] = useState(undefined)
     const {trace}= useSelector(state=> state.questions)
+    const result= useSelector(state=> state.result.result)
     const [{ isLoading, apiData, serverError}] = useFetchQuestion() 
 
     const questions = useSelector(state => state.questions.queue[state.questions.trace])
@@ -48,7 +49,7 @@ export default function Questions({onChecked}) {
                         />
                          {/* to display all the options of the question */}
                         <label className='text-primary' htmlFor={`q${i}-option`}>{q}</label>
-                        <div className='check'></div>
+                        <div className={`check ${result[trace] == i? 'checked': ''}`}></div>
                     </li>
                 ))
             }
