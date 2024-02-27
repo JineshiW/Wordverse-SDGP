@@ -12,8 +12,18 @@ app.use(express.json()); // Parse incoming request bodies in JSON format
 app.use(cors()); // Enable CORS for the Express server
 
 
-// Connect to MongoDB database named 'practice_mern' running locally on port 27017
-mongoose.connect('mongodb://127.0.0.1:27017/practice_mern'); 
+// Connect to MongoDB database
+(async () => {
+    try {
+        await mongoose.connect('mongodb+srv://sahan:root@cluster0.0lnibmx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        });
+        console.log('Connected to MongoDB Atlas');
+    } catch (error) {
+        console.error('Error connecting to MongoDB Atlas:', error);
+    }
+})(); 
 
 // Endpoint for user registration
 app.post('/register', (req, res)=>{
