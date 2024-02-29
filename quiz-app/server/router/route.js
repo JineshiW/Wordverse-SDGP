@@ -1,10 +1,11 @@
 import { Router } from "express";
 const router =Router();
 
-// Questions route APi
-router.get('/questions', (req, res) =>{
-    res.json("questions api get request")
-})
+// import controllers
+import * as controller from "../controllers/controller.js"
+
+// Questions route API
+router.get('/questions', controller.getQuestions)
 
 
 export default router;
