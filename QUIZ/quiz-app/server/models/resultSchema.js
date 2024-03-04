@@ -11,4 +11,4 @@ const resultModel = new Schema({
     createdAt: {type: Date, default: Date.now}
 })
 
-export default mongoose.model('/result', resultModel)
+export default mongoose.model('result', resultModel)
