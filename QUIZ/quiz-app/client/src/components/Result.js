@@ -23,6 +23,8 @@ export default function Result() {
   const earnPoints = earnPoints_Number(result, answers, 10)
   const flag = flagResult (totalPoints, earnPoints)
 
+  console.log({result, username: userId, attempts, points: earnPoints, achived: flag? "Passed": "Failed"})
+
   function onRestart(){
     dispatch(resetAllAction())
     dispatch(resetResultAction())
@@ -35,7 +37,7 @@ export default function Result() {
       <div className='result flex-center'>
         <div className='flex'>
           <span>Username</span>
-          <span className='bold'>Hannah</span>
+          <span className='bold'>{userId || "N/A"}</span>
         </div>
         <div className='flex'>
           <span>Total Quiz Points: </span>

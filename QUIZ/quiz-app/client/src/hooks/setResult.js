@@ -15,3 +15,4 @@ export const updateResult = (index) => async (dispatch) =>{
         console.log(error)
     }
 }
+
