@@ -4,7 +4,7 @@ import './Navbar.css';
 
 const Navbar = () => {
   const handleLogout = () => {
-    // Add your logout logic here
+    // Add the logout logic 
   };
 
   return (

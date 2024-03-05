@@ -9,7 +9,7 @@ import Languages from './pages/Languages';
 import Courses from './pages/Courses';
 import Quizzes from './pages/Quizzes';
 import Navbar  from './components/Navbar';
-
+import Profile from './pages/Profile';
 
 function App() {
   return (
@@ -32,6 +32,7 @@ function App() {
             <Route path="/languages" element={<Languages />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/quizzes" element={<Quizzes />} />
+            <Route path="/profile" element={<Profile />} /> 
           </Routes>
         </div>
       </div>
