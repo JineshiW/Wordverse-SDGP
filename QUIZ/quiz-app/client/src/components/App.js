@@ -1,48 +1,25 @@
 import '../styles/App.css';
-
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 /** import components */
 import Main from './Main';
 import Quiz from './Quiz';
 import Result from './Result';
 import Levels from './Levels';
-import { CheckUserExist } from '../helper/helper';
 import Progress from './Progress';
-
-/** react routes for main page , quiz page and result page*/
-const router = createBrowserRouter([
-  {
-    path : '/',
-    element : <Main></Main>
-  },
-  {
-    path : '/quiz',
-    element : <CheckUserExist><Quiz/></CheckUserExist>
-  },
-  {
-    path : '/result',
-    element : <CheckUserExist><Result/></CheckUserExist>
-  },
-  {
-    path : '/level',
-    element : <Levels></Levels>
-  },
-  {
-    path : '/progress',
-    element : <Progress></Progress>
-  },
-
-])
 
 function App() {
   return (
-    <>
-      <RouterProvider router={router} />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/mainQuiz" element={<Main />} />
+        <Route path="/mainQuiz/quiz" element={<Quiz />} />
+        <Route path="/mainQuiz/result" element={<Result />} />
+        <Route path="/mainQuiz/level" element={<Levels />} />
+        <Route path="/mainQuiz/progress" element={<Progress />} />
+      </Routes>
+    </Router>
   );
 }
 
 export default App;
-
-

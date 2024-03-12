@@ -1,13 +1,14 @@
 import React, { useRef } from 'react'
-import { Link } from 'react-router-dom'
-import '../styles/Main.css'
-import { setUserId } from '../redux/resultReducer'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { setUserId } from '../redux/resultReducer'
+import '../styles/Main.css'
 
 export default function Main() {
 
     const inputRef = useRef(null)
     const dispatch = useDispatch()
+
 
     function startQuiz(){
         if(inputRef.current?.value){
@@ -40,6 +41,8 @@ export default function Main() {
         <div className='quit'>
             <Link className='btn' to={'level'}> End Quiz</Link>
         </div>
+       
+
     </div>
   )
 }

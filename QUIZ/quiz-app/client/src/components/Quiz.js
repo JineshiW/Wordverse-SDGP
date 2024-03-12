@@ -49,7 +49,7 @@ export default function Quiz() {
 
   // finishing quiz after last question
   if(result.length && result.length >=queue.length){
-    return <Navigate to={'/result'} replace='true'/>
+    return <Navigate to={'/mainQuiz/result'} replace='true'/>
   }
 
   return (

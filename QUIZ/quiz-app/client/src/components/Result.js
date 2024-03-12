@@ -82,7 +82,7 @@ export default function Result() {
 
       <div className="start">
         {/* navigate user to restart the quiz */}
-        <Link className="btn" to={"/"} onClick={onRestart}>
+        <Link className="btn" to={"/mainQuiz"} onClick={onRestart}>
           Restart
         </Link>
       </div>
