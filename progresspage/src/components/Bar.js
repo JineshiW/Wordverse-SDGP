@@ -35,9 +35,10 @@ export default function Bar  ()  {
                     {""}
                   </div>
                 </div>
-                <div className = "progress-lebel"> {progress}% </div>
-                <button onClick={handleButtonClick}>progress </button>
-                <button onClick={handleButtonReset}>Reset</button>
+                <div className = "progress-label"> 
+                  {progress}% 
+                </div>
+                    
                 </div>
 
     );

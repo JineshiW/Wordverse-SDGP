@@ -1,15 +1,22 @@
 button{
+    background-color: #3887BE;
     border: none;
-    font-size: 18px;
-    padding: 7px,20px,6px,20px;
-    background-color:#ccc;
-    margin:14px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 10px;
     cursor: pointer;
-    border-radius:14px;
-    outline:none;
-    font-weight:bold;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
 
-
+.button:hover {
+    background-color: #9BB8CD; 
 }
 
 button.active{
