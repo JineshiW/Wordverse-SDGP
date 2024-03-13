@@ -60,7 +60,7 @@ function LevelCard() {
             <CircularProgress />
           </div>
         )}
-        {/* <TripData
+        { <TripData
           image={Trip1}
           heading="English"
           text="English is a widely spoken language, used as a global means of communication. It has a rich history and influences from various cultures. Learning English opens doors to opportunities in education, business, and travel. Whether you’re a beginner or an advanced learner, mastering English enhances your ability to connect with people worldwide and explore diverse literature, music, and media."
@@ -74,7 +74,7 @@ function LevelCard() {
           image={Trip1}
           heading="Deutsch"
           text="Deutsch, also known as German, is a fascinating language spoken primarily in Germany, Austria, and Switzerland. It has a rich literary tradition, with influential writers like Goethe and Kafka. Learning German opens doors to cultural exploration, business opportunities, and connections with over 90 million native speakers worldwide."
-        /> */}
+        /> }
       </div>
     </div>
   );
