@@ -1,14 +1,17 @@
+/* This CSS code defines styling for a form container */
+/* Sets margin around the container and text color */
 .from-container{
     margin: 4rem 6rem;
     color: #2a2a2a;
     
 }
+/* Styles for the form within the container */
 .from-container form{
-    padding-top: 4rem;
-    display:flex;
-    flex-direction:column;
-    width:50%;
-    margin:auto;
+    padding-top: 4rem;/* Adds padding above the form */
+    display:flex;/* Displays form items in a flex container */
+    flex-direction:column;/* Sets the direction of flex items to column */
+    width:50%;/* Sets the width of the form */
+    margin:auto; /* Centers the form horizontally */
 }
 .from-container input{
     height:3rem;
