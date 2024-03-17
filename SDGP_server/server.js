@@ -1,47 +1,48 @@
-require("dotenv").config();
-const cors = require("cors");
-var bodyParser = require("body-parser");
+// Import necessary modules and packages
+require("dotenv").config(); // Loads environment variables from a .env file into process.env
+const cors = require("cors"); // Cross-Origin Resource Sharing middleware
+var bodyParser = require("body-parser"); // Parses incoming request bodies in a middleware before handlers
 
-// const { errorHandler } = require("./middleware/errorMiddleware");
-
+// Import Express framework
 const express = require("express");
+
+// Import Mongoose ORM for MongoDB
 const mongoose = require("mongoose");
 
-//routes
-const courseRoutes = require("./course/course.routes");
-const levelRoutes = require("./level/level.routes");
+// Import routes for different resources
+const courseRoutes = require("./course/course.routes"); // Course routes
+const levelRoutes = require("./level/level.routes"); // Level routes
 
-//express app
+// Create an Express application instance
 const app = express();
 
-//middleware
-app.use(cors());
-app.use(express.json({ limit: "50mb" }));
-
-app.use(express.json());
-app.use((req, res, next) => {
+// Middleware setup
+app.use(cors()); // Enables Cross-Origin Resource Sharing
+app.use(express.json({ limit: "50mb" })); // Parses incoming JSON payloads with a limit of 50MB
+app.use(express.json()); // Parses incoming JSON payloads
+app.use((req, res, next) => { // Custom middleware to log request path and method
   console.log(req.path, req.method);
-  next();
+  next(); // Passes control to the next middleware
 });
 
-//routes
-app.use("/api/course", courseRoutes);
-app.use("/api/level", levelRoutes);
-// auth only
+// Define routes for different resources
+app.use("/api/course", courseRoutes); // Course routes
+app.use("/api/level", levelRoutes); // Level routes
+app.use("/api/auth", require("./auth/userRoutes")); // Authentication routes
 
-// app.use(errorHandler);
-
-//Connect to db
+// Connect to MongoDB database
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(process.env.MONGO_URI) // Connects to the MongoDB database using the URI specified in the environment variables
   .then(() => {
-    //listen for requests
+    // If the connection is successful, start the Express app
     app.listen(process.env.PORT, () => {
-      console.log("connected to DB & listening on port", process.env.PORT);
+      console.log("connected to DB & listening on port", process.env.PORT); // Logs a message indicating successful connection and the port the server is listening on
     });
   })
   .catch((error) => {
+    // If there's an error connecting to the database, log the error
     console.log(error);
   });
 
+// Access environment variables
 process.env;
