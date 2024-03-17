@@ -15,5 +15,5 @@ function ContactForm(){
 
     )
 }
-//  contact form  here
+//  contact here
 export default ContactForm;
