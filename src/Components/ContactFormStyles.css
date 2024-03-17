@@ -14,32 +14,32 @@
     margin:auto; /* Centers the form horizontally */
 }
 .from-container input{
-    height:3rem;
-    padding:0 2rem;
-    margin-bottom:2rem;
-    border-radius: .3rem;
-    border: 2px solid #2a2a2a;
+    height: 3rem; /* Sets the height of input fields */
+    padding: 0 2rem; /* Adds padding inside input fields */
+    margin-bottom: 2rem; /* Adds margin below input fields */
+    border-radius: .3rem; /* Sets border radius for input fields */
+    border: 2px solid #2a2a2a; /* Sets border style for input fields */
 }
 
 .from-container textarea{
-    padding: 2rem;
-    margin-bottom:2rem;
-    border-radius: .3rem;
-    border: 1px solid #2a2a2a;
+    padding: 2rem; /* Adds padding inside textarea */
+    margin-bottom: 2rem; /* Adds margin below textarea */
+    border-radius: .3rem; /* Sets border radius for textarea */
+    border: 1px solid #2a2a2a; /* Sets border style for textarea */
 }
 
 .from-container button{
-    display:inline;
+    display: inline; /* Displays buttons as inline elements */
 
 }
 
 @media screen and (max-width:850px){
     .from-container{
-        margin:4rem 2rem;
+        margin: 4rem 2rem; /* Adjusts margin for smaller screens */
     }
 
     .from-container from{
-        padding-top:2rem;
-        width:90%;
+        padding-top: 2rem; /* Adjusts padding above form for smaller screens */
+        width: 90%; /* Adjusts width of form for smaller screens */
     }
 }
