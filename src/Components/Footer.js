@@ -1,13 +1,18 @@
+// Importing the CSS file for styling
 import "./FooterStyle.css"
 
+// Defining the Footer component
 const Footer = () =>{
     return(
+        // Main container for the footer
         <div className="footer">
             <div className="top">
+                {/* Left section containing the title and description */}
                 <div>
                     <h1>WordVerse</h1>
                     <p>Level up your Language skills through the continuous learning.</p>
                 </div>
+                {/* Right section containing social media icons */}
                 <div>
                     <a href="/">
                         <i className="fa-brands fa-facebook-square"></i>
@@ -23,6 +28,7 @@ const Footer = () =>{
                     </a>
                 </div>
             </div>
+             {/* Bottom section of the footer */}
             <div className="bottom">
                 <div>
                     <h4>Courses</h4>
@@ -31,6 +37,7 @@ const Footer = () =>{
                     <a href ="/">Chinese</a>
                     <a href ="/">French</a>
                 </div>
+                 {/* Section for community links */}
                 <div>
                     <h4>Community</h4>
                     <a href ="/">GitHub</a>
@@ -38,6 +45,7 @@ const Footer = () =>{
                     <a href ="/">Project</a>
                     <a href ="/">Twitter</a>
                 </div>
+                 {/* Section for help links */}
                 <div>
                     <h4>Help</h4>
                     <a href ="/">Support</a>
@@ -45,6 +53,7 @@ const Footer = () =>{
                     <a href ="/">Chat</a>
                     <a href ="/">Contact us</a>
                 </div>
+                 {/* Section for other links */}
                 <div>
                     <h4>Others</h4>
                     <a href ="/">Terms of Service</a>
@@ -57,5 +66,5 @@ const Footer = () =>{
         </div>
     )
 }
-
+// Exporting the Footer component
 export default Footer
