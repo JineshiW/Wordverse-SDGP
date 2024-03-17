@@ -1,60 +1,67 @@
+/* Styling for the main footer container */
 .footer{
-    padding: 4rem 6 rem;
-    background: #000;
-    color:#ffffff;
+    padding: 4rem 6 rem; /* Adds padding around the footer */
+    background: #000; /* Sets background color to black */
+    color:#ffffff; /* Sets text color to white */
 }
-
+/* Styling for the top section of the footer */
 .top{
-   display:flex;
-   align-items: center;
-   text-align:start; 
-   justify-content: space-between;
-   flex-wrap:wrap;
-}
+   display:flex; /* Displays elements in a flex container */
+   align-items: center; /* Aligns items vertically at the center */
+   text-align:start;  /* Sets text alignment to start (left) */
+   justify-content: space-between; /* Distributes items evenly along the main axis */
+   flex-wrap:wrap; /* Allows items to wrap to the next line if needed */
 
+}
+/* Styling for social media icons in the top section */
 .top i{
-    color:#fff;
-    font-size:2rem;
-    margin-left:.5rem;   
+    color: #fff; /* Sets icon color to white */
+    font-size: 2rem; /* Sets font size of icons */
+    margin-left: .5rem; /* Adds margin to the left of icons */  
 }
 
+/* Styling for social media icons on hover */
 .top i:hover{
-    color:#01959a;
+    color: #01959a; /* Changes icon color on hover */
+}
+/* Styling for the bottom section of the footer */
+.bottom {
+    padding-top: 2rem; /* Adds padding above the bottom section */
+    text-align: start; /* Sets text alignment to start (left) */
+    display: flex; /* Displays elements in a flex container */
+    justify-content: space-evenly; /* Distributes items evenly along the main axis */
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
 }
 
-.bottom{
-   padding-top:2rem;
-   text-align:start;
-   display:flex;
-    justify-content:space-evenly; 
-   flex-wrap:wrap;
-
-}
-.bottom div{
-    display:flex;
-    flex-direction: column;
+/* Styling for individual sections within the bottom section */
+.bottom div {
+    display: flex; /* Displays elements in a flex container */
+    flex-direction: column; /* Sets the direction of flex items to column */
 }
 
-.bottom h4{
-    font-size:1.3rem;
-    padding: 1rem 0 .8rem 0;
+/* Styling for headings within the bottom section */
+.bottom h4 {
+    font-size: 1.3rem; /* Sets font size of headings */
+    padding: 1rem 0 .8rem 0; /* Adds padding to headings */
 }
 
-.bottom a{
-    text-decoration:none;
-    color:#fafafa;
-    padding-bottom: .4rem;
-    font-size: 1.1rem;
+/* Styling for links within the bottom section */
+.bottom a {
+    text-decoration: none; /* Removes underline from links */
+    color: #fafafa; /* Sets text color to off-white */
+    padding-bottom: .4rem; /* Adds padding to the bottom of links */
+    font-size: 1.1rem; /* Sets font size of links */
 }
 
-@media screen and (max-width: 850px){
-    .footer{
-        padding:4rem 2rem;
+/* Media query for responsiveness */
+@media screen and (max-width: 850px) {
+    .footer {
+        padding: 4rem 2rem; /* Adjusts padding for smaller screens */
     }
-    .footer i{
-        margin:1rem 1rem 0 0;
+    .footer i {
+        margin: 1rem 1rem 0 0; /* Adjusts margin for social media icons on smaller screens */
     }
-    .bottom div{
-        width:50%;
+    .bottom div {
+        width: 50%; /* Sets width of sections within the bottom section for smaller screens */
     }
 }
