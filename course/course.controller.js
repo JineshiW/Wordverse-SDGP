@@ -11,6 +11,23 @@ const getAll = async (req, res) => {
 
 }
 
+// get a single 
+const getSingle = async (req, res) => {
+    const { id } = req.params
+
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        return res.status(404).json({ error: 'No Such Volunteer Job' })
+    }
+    const defaultTemModel = await currentModel.findById(id)
+
+    if (!defaultTemModel) {
+        return res.status(404).json({ error: 'No Such Volunteer Job' })
+
+    }
+    res.status(200).json(defaultTemModel)
+}
+
+
 
 
 
