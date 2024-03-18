@@ -1,33 +1,33 @@
-export const MenuItems = [
+export const MenuItems = [  //Nav linksare here
     {
-        title: "Home",
-        url: "/",
-        cName: "nav-links",
-        icon: "fa-solid fa-house"
+        title: "Home ",
+        url: "/ ", 
+        cName: "nav-links ",
+        icon: "fa-solid fa-house "
     },
     
     {
-        title: "Course",
-        url: "/service",
-        cName: "nav-links",
-        icon: "fa-solid fa-briefcase" 
+        title: "Course ",
+        url: "/service ",
+        cName: "nav-links ",
+        icon: "fa-solid fa-briefcase " 
     },
     {
-        title: "About",
-        url: "/about",
-        cName: "nav-links",
-        icon: "fa-solid fa-circle-info"
+        title: "About ",
+        url: "/about ",
+        cName: "nav-links ",
+        icon: "fa-solid fa-circle-info "
     }, 
     {
-        title: "Contact",
-        url: "/contact",
-        cName: "nav-links",
-        icon: "fa-solid fa-address-book"
+        title: "Contact ",
+        url: "/contact ",
+        cName: "nav-links ",
+        icon: "fa-solid fa-address-book "
     },
   
     {
-        title: "Sign Up",
-        url: "/signup",
+        title: "Sign Up ",
+        url: "/signup ",
         cName: "nav-links-mobile",
     }
 

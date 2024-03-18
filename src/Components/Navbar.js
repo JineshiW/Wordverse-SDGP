@@ -1,5 +1,5 @@
 import { Component } from "react";
-import "./NavbarStyle.css"
+import "./NavbarStyle.css" //imported navbar style.css 
 import { MenuItems } from "./Menuitems";
 import { Link } from "react-router-dom";
 
@@ -8,8 +8,7 @@ class Navbar extends Component {
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
-    render() {
-        return (
+    render() { //extending the components  if we need extend ,we need to render it         return (
             <nav className="NavbarItems">
                 <h1 className="Navbar-logo">WordVerse</h1>
                 <div className="menu-icons" onClick={this.handleClick}>
