@@ -41,14 +41,18 @@ const getSingle = async (req, res) => {
 // filterWithCourseId
 
 // get a by unit id
+// Function to filter levels by course ID
 const filterWithCourseId = async (req, res) => {
   const { courseID } = req.params;
 
+  // Check if the provided course ID is a valid ObjectId
   if (!mongoose.Types.ObjectId.isValid(courseID)) {
     return res.status(404).json({ error: "No Such Volunteer Job" });
   }
+  // Find levels with the provided course ID
   const defaultTemModel = await currentModel.find({ courseID: courseID });
 
+  // If no levels are found with the provided course ID, return an error
   if (!defaultTemModel) {
     return res.status(404).json({ error: "No Such Volunteer Job" });
   }
