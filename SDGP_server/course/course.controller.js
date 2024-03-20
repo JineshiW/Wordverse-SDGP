@@ -90,4 +90,40 @@ const deleteSinle = async (req, res) => {
     res.status(200).json(defaultTemModel)
 }
 
+// Define an asynchronous function called updateDocument that takes req (request) and res (response) as parameters
+const updateDocument = async (req, res) => {
+    // Extract the id parameter from the request parameters
+    const { id } = req.params
+
+    // Check if the id is a valid MongoDB ObjectId
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        // If the id is not valid, return a 404 error response with a message indicating no such workout
+        return res.status(404).json({ error: 'No Such Workout' })
+    }
+
+    // Use findByIdAndUpdate to find a document by its id and update it with the request body, setting the new option to true to return the updated document
+    const defaultTemModel = await currentModel.findByIdAndUpdate({ _id: id }, {
+        ...req.body
+    }, { new: true })
+
+    // Check if the updated document exists
+    if (!defaultTemModel) {
+        // If the updated document does not exist, return a 400 error response with a message indicating no such workout
+        return res.status(400).json({ error: 'No Such Workout' })
+    }
+
+    // If the document is updated successfully, set the response status to 200 (OK) and send the updated document as a JSON response
+    res.status(200).json(defaultTemModel)
+}
+
+// Export the functions to be used in other modules
+module.exports = {
+    getSingle,
+    getAll,
+    createNew,
+    deleteSinle,
+    updateDocument,
+    createWithoutReqBodyCheck,
+}
+
 
