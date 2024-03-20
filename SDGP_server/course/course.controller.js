@@ -3,100 +3,14 @@ const currentModel = require('./course.model')
 
 const mongoose = require('mongoose')
 
-// get all 
+//get all
+// Define an asynchronous function called getAll that takes req (request) and res (response) as parameters
 const getAll = async (req, res) => {
+    // Use the currentModel to find all documents in the collection, sort them in descending order based on the createdAt field, and store the result in defaultTemModel
     const defaultTemModel = await currentModel.find({}).sort({ createdAt: -1 })
 
-    res.status(200).json(defaultTemModel)
-
-}
-
-
-// get a single 
-const getSingle = async (req, res) => {
-    const { id } = req.params
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: 'No Such Volunteer Job' })
-    }
-    const defaultTemModel = await currentModel.findById(id)
-
-    if (!defaultTemModel) {
-        return res.status(404).json({ error: 'No Such Volunteer Job' })
-
-    }
+    // Set the response status to 200 (OK) and send defaultTemModel as a JSON response
     res.status(200).json(defaultTemModel)
 }
 
-
-// create a new currentModel
-const createWithoutReqBodyCheck = async (req, res) => {
-    //add doc to db
-    try {
-        const defaultTemModel = await currentModel.create(req.body)
-        res.status(200).json(defaultTemModel)
-    } catch (error) {
-        res.status(400).json({ error: error.message })
-    }
-}
-
-const createNew = async (req, res) => {
-    const { name } = req.body;
-
-    try {
-        
-        // Create a new document
-        const defaultTemModel = await currentModel.create(req.body)
-        res.status(200).json(defaultTemModel);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-};
-
-// delete a currentModel
-const deleteSinle = async (req, res) => {
-    const { id } = req.params
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: 'No Such Volunteer Job' })
-    }
-    const defaultTemModel = await currentModel.findOneAndDelete({ _id: id })
-
-    if (!defaultTemModel) {
-        return res.status(400).json({ error: 'No Such Volunteer Job' })
-    }
-
-    res.status(200).json(defaultTemModel)
-
-}
-
-
-// update a workout
-const updateDocument = async (req, res) => {
-
-    const { id } = req.params
-
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-        return res.status(404).json({ error: 'No Such Workout' })
-    }
-    const defaultTemModel = await currentModel.findByIdAndUpdate({ _id: id }, {
-        ...req.body
-    }, { new: true })
-
-    if (!defaultTemModel) {
-        return res.status(400).json({ error: 'No Such Workout' })
-    }
-
-    res.status(200).json(defaultTemModel)
-
-}
-
-module.exports = {
-    getSingle,
-    getAll,
-    createNew,
-    deleteSinle,
-    updateDocument, createWithoutReqBodyCheck,
-    
-}
 
