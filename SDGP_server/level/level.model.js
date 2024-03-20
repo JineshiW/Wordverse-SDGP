@@ -1,7 +1,8 @@
+// Import the Mongoose library
 const mongoose = require("mongoose");
-
+// Destructure the Schema object from mongoose
 const Schema = mongoose.Schema;
-
+// Define the schema for the "level" collection
 const levelSchema = new Schema(
   {
     levelName: {
