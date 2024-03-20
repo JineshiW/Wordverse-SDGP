@@ -73,13 +73,12 @@ const createWithoutReqBodyCheck = async (req, res) => {
 };
 // Function to create a new level with request body check
 const createNew = async (req, res) => {
-  const { name } = req.body;
-
   try {
     // Create a new level document using data from the request body
     const defaultTemModel = await currentModel.create(req.body);
-    res.status(200).json(defaultTemModel);
+    res.status(200).json(defaultTemModel); // Send the created level as a JSON response with status code 200 (OK)
   } catch (error) {
+    // If an error occurs during creation, send a JSON response with the error message and status code 400 (Bad Request)
     res.status(400).json({ error: error.message });
   }
 };
