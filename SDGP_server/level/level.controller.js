@@ -21,15 +21,18 @@ const getAll = async (req, res) => {
   }
 };
 
-// get a single
+/// Function to get a single level by its ID
 const getSingle = async (req, res) => {
   const { id } = req.params;
 
+  // Check if the provided ID is a valid ObjectId
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ error: "No Such Volunteer Job" });
   }
+  // Find the level by its ID
   const defaultTemModel = await currentModel.findById(id);
 
+  // If no level is found with the provided ID, return an error
   if (!defaultTemModel) {
     return res.status(404).json({ error: "No Such Volunteer Job" });
   }
