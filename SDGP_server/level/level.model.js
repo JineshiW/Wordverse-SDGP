@@ -5,30 +5,25 @@ const Schema = mongoose.Schema;
 // Define the schema for the "level" collection
 const levelSchema = new Schema(
   {
+    // Define a field for the name of the level
     levelName: {
-      type: String,
-      required: true,
+      type: String,    // Data type is String
+      required: true,  // It's a required field
     },
+    // Define a field for the textual material of the level
     levelMaterialTexts: {
-      type: String,
-      required: true,
+      type: String,    // Data type is String
+      required: true,  // It's a required field
     },
+    // Define a field for the description of the level
     levelDescription: {
-      type: String,
-      required: true,
+      type: String,    // Data type is String
+      required: true,  // It's a required field
     },
+    // Define a field for the image associated with the level
     levelImage: {
-      type: Object,
-      required: true,
-    },
-    levelMaterialImage: {
-      type: [],
-      required: true,
-    },
-    courseID: {
-      type: Schema.Types.ObjectId,
-      ref: "course",
-      required: true,
+      type: Object,    // Data type is Object
+      required: true,  // It's a required field
     },
   },
   { timestamps: true }
