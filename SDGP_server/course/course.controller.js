@@ -37,4 +37,33 @@ const getSingle = async (req, res) => {
     res.status(200).json(defaultTemModel)
 }
 
+// Define an asynchronous function called createWithoutReqBodyCheck that takes req (request) and res (response) as parameters
+const createWithoutReqBodyCheck = async (req, res) => {
+    try {
+        // Create a new document in the currentModel collection using the request body
+        const defaultTemModel = await currentModel.create(req.body)
+        // Send a JSON response with the created document and a status of 200 (OK)
+        res.status(200).json(defaultTemModel)
+    } catch (error) {
+        // If an error occurs during document creation, send a 400 (Bad Request) error response with the error message
+        res.status(400).json({ error: error.message })
+    }
+}
+
+// Define an asynchronous function called createNew that takes req (request) and res (response) as parameters
+const createNew = async (req, res) => {
+    // Extract the name property from the request body
+    const { name } = req.body;
+
+    try {
+        // Create a new document in the currentModel collection using the request body
+        const defaultTemModel = await currentModel.create(req.body)
+        // Send a JSON response with the created document and a status of 200 (OK)
+        res.status(200).json(defaultTemModel);
+    } catch (error) {
+        // If an error occurs during document creation, send a 400 (Bad Request) error response with the error message
+        res.status(400).json({ error: error.message });
+    }
+};
+
 
