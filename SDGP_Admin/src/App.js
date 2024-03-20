@@ -1,7 +1,8 @@
 import React, { Suspense } from "react";
-import router from "./router";
-import { RouterProvider } from "react-router-dom";
-import ErrorBoundary from "./pages/Error/error";
+import router from "./router";// Importing the router configuration
+import { RouterProvider } from "react-router-dom";// Importing RouterProvider from react-router-dom
+import ErrorBoundary from "./pages/Error/error"; // Importing the ErrorBoundary component
+
 
 function App() {
   return (
