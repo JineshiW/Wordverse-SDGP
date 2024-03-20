@@ -60,21 +60,23 @@ const filterWithCourseId = async (req, res) => {
 };
 
 // create a new currentModel
+// Function to create a new level without checking request body
 const createWithoutReqBodyCheck = async (req, res) => {
   //add doc to db
-  try {
+    try {
+      // Create a new level document using data from the request body
     const defaultTemModel = await currentModel.create(req.body);
     res.status(200).json(defaultTemModel);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
 };
-
+// Function to create a new level with request body check
 const createNew = async (req, res) => {
   const { name } = req.body;
 
   try {
-    // Create a new document
+    // Create a new level document using data from the request body
     const defaultTemModel = await currentModel.create(req.body);
     res.status(200).json(defaultTemModel);
   } catch (error) {
