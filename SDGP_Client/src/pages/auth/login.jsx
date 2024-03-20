@@ -3,12 +3,10 @@ import React, { useState } from "react";
 // import Link from "next/link";
 import { useFormik } from "formik"; // Formik is a form library for React
 import * as Yup from "yup"; // Yup is a JavaScript schema builder for value parsing and validation
-import axios from "axios"; 
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-// import { useRouter } from "next/router";
-// import { isEmpty } from "@/utils/utils";
-import { Link } from "react-router-dom";
+import axios from "axios";  // Axios is a promise-based HTTP client for the browser and Node.js
+import { toast } from "react-toastify"; // React Toastify is a toast notification library for React apps
+import "react-toastify/dist/ReactToastify.css"; 
+import { Link } from "react-router-dom"; // React Router DOM provides routing capabilities to a React application
 import { isEmpty } from "../../service/utils";
 import { Container } from "@mui/material"; // Material-UI Container component
 import NavbarLogin from "./Navbar"; // Navbar component for login page
@@ -39,19 +37,23 @@ const LoginPage = () => {
         resetForm(); // Reset form fields
         setLoading(false); // Disable loading state
       })
-      .catch((err) => toast.error("Invalid credentials."), setLoading(false));
+      .catch((err) => toast.error("Invalid credentials."), setLoading(false)); // Show error toast if login fails
   };
 
   const [Loading, setLoading] = useState(false);
+
+  // Formik hook to handle form state and submission
   const formik = useFormik({
     initialValues: {
       email: "",
       password: "",
     },
+
+    // Apply validation schema to form fields
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
-      setLoading(true);
-      RegisterData(values, resetForm);
+      setLoading(true); // Enable loading state
+      RegisterData(values, resetForm); 
       // try {
       //   // Perform the API request (replace the URL with your actual API endpoint)
       //   const response = await axios.post(
@@ -81,6 +83,8 @@ const LoginPage = () => {
       // }
     },
   });
+
+  // Render the login page UI
   return (
     <div className="w-full bg-white rounded-xl">
       <NavbarLogin />
@@ -173,4 +177,5 @@ const LoginPage = () => {
   );
 };
 
+// Export the login page component
 export default LoginPage;
