@@ -82,18 +82,13 @@ const createNew = async (req, res) => {
     res.status(400).json({ error: error.message });
   }
 };
-
-// delete a currentModel
+// Function to delete a level by its ID
 const deleteSinle = async (req, res) => {
-  const { id } = req.params;
+  const { id } = req.params; // Extract the level ID from the request parameters
 
+  // Check if the provided ID is a valid ObjectId
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(404).json({ error: "No Such Volunteer Job" });
-  }
-  const defaultTemModel = await currentModel.findOneAndDelete({ _id: id });
-
-  if (!defaultTemModel) {
-    return res.status(400).json({ error: "No Such Volunteer Job" });
+    return res.status(404).json({ error: "No Such Volunteer Job" }); // If not valid, send a JSON response with status code 404 (Not Found)
   }
 
   res.status(200).json(defaultTemModel);
