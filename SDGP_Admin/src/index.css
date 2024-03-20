@@ -1,60 +1,77 @@
+/* Import Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Play:wght@700&display=swap");
 
+/* Import Tailwind CSS */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Define custom CSS variables */
 :root {
-  --yellow: #01959a;
-  --askew: #484848;
+  --yellow: #01959a; /* Define a custom yellow color */
+  --askew: #484848; /* Define a custom color */
 }
 
+/* Base styles */
 @layer base {
-
+  /* Apply background color to the body */
   body {
     background: #f1f1f1;
   }
-
 }
 
+/* Styles for links */
 .link {
+  /* Apply styles for links */
   @apply p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium;
 }
 
+/* Styles for link boxes */
 .link-box {
+  /* Apply styles for link boxes */
   @apply p-2.5 flex rounded-md gap-6 items-center md:cursor-pointer cursor-default duration-300 font-medium bg-black text-white;
 }
 
+/* Styles for active elements */
 .active {
+  /* Apply styles for active elements */
   @apply bg-black text-white;
 }
 
+/* Styles for chips */
 .chip {
+  /* Define styles for chips */
   width: fit-content;
   padding: 0.5rem;
 }
 
-
+/* Styles for filter container */
 .filter-container {
+  /* Apply styles for filter container */
   @apply bg-gray-200 p-4 rounded-lg;
 }
 
-
+/* Styles for filter input */
 .filter-input {
+  /* Apply styles for filter input */
   @apply border rounded-lg px-2 py-1 mr-2;
   font-size: 14px;
   height: 38px;
   outline: none;
 }
 
-/* Add any global styling or reset as needed */
+/* Additional global styling or reset */
 
+/* Styles for form floating label */
 .form-floating {
+  /* Apply styles for form floating label */
   position: relative;
   margin-bottom: 1rem;
 }
 
+/* Styles for form control */
 .form-control {
+  /* Apply styles for form control */
   width: 100%;
   padding: 1rem;
   font-size: 1rem;
@@ -63,13 +80,17 @@
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+/* Styles for form control on focus */
 .form-control:focus {
+  /* Apply styles for form control on focus */
   border-color: #80bdff;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
 
+/* Styles for form floating label on focus */
 .form-floating label {
+  /* Apply styles for form floating label on focus */
   position: absolute;
   top: 0;
   left: 0;
@@ -78,37 +99,49 @@
   transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
 }
 
+/* Styles for form control with non-empty value or on focus */
 .form-control:focus+label,
 .form-control:not(:placeholder-shown)+label {
+  /* Apply styles for form control with non-empty value or on focus */
   transform: translateY(-1.25rem) scale(0.8);
   opacity: 0.5;
 }
 
+/* Styles for form control with error */
 .has-error .form-control {
+  /* Apply styles for form control with error */
   border-color: #dc3545;
 }
 
+/* Styles for error message */
 .error-message {
+  /* Apply styles for error message */
   color: #dc3545;
   font-size: 0.875rem;
   margin-top: 0.25rem;
 }
 
+/* Styles for download button */
 .btndowload {
+  /* Apply styles for download button */
   background: "black";
   color: "##01959a";
   padding: 0.7rem;
   border-radius: 6px;
 }
 
+/* Styles for submit button */
 .submit-btn {
+  /* Apply styles for submit button */
   background: "red";
   color: "##01959a";
   padding: 0.7rem;
   border-radius: 6px;
 }
 
+/* Styles for add picture button */
 .add-pic-btn {
+  /* Apply styles for add picture button */
   color: #fff;
   border-radius: 6px;
   background: black;
@@ -120,11 +153,12 @@
   justify-content: center;
 }
 
+/* Styles for text area */
 .text-area {
+  /* Apply styles for text area */
   background: transparent;
   width: 100%;
   border: 1px solid gray;
   border-radius: 3px;
   padding: 7px 16px;
-
 }
