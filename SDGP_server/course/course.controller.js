@@ -66,4 +66,28 @@ const createNew = async (req, res) => {
     }
 };
 
+// Define an asynchronous function called deleteSinle that takes req (request) and res (response) as parameters
+const deleteSinle = async (req, res) => {
+    // Extract the id parameter from the request parameters
+    const { id } = req.params
+
+    // Check if the id is a valid MongoDB ObjectId
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+        // If the id is not valid, return a 404 error response with a message indicating no such volunteer job
+        return res.status(404).json({ error: 'No Such Volunteer Job' })
+    }
+
+    // Use findOneAndDelete to find and delete a document by its id
+    const defaultTemModel = await currentModel.findOneAndDelete({ _id: id })
+
+    // Check if the document with the specified id exists and was deleted
+    if (!defaultTemModel) {
+        // If the document does not exist or was not deleted, return a 400 error response with a message indicating no such volunteer job
+        return res.status(400).json({ error: 'No Such Volunteer Job' })
+    }
+
+    // If the document exists and was deleted successfully, set the response status to 200 (OK) and send the deleted document as a JSON response
+    res.status(200).json(defaultTemModel)
+}
+
 
