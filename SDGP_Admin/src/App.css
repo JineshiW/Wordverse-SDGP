@@ -9,12 +9,13 @@
   pointer-events: none; /* Prevents the logo from being the target of pointer events */
 }
 
+/* Media query to handle reduced motion preferences */
 @media (prefers-reduced-motion: no-preference) {
+  /* Styles for the logo animation */
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Applies a spinning animation to the logo */
   }
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
