@@ -14,7 +14,7 @@ const {
 
 // Define routes
 
-//Get all 
+
 router.get('/',getAll)  // Route to get all documents
 
 router.get('/course/:courseID',filterWithCourseId)// Route to get documents filtered by course ID
@@ -22,9 +22,8 @@ router.get('/course/:courseID',filterWithCourseId)// Route to get documents filt
 // Route to get a single document by its ID
 router.get('/:id',getSingle)
 
-//Get a by unit id
 
-//POST a new document
+
 router.post('/', createNew) // Route to create a new document
 
 //Delete a  document
