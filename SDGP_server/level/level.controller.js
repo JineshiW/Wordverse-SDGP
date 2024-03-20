@@ -86,34 +86,44 @@ const createNew = async (req, res) => {
 const deleteSinle = async (req, res) => {
   const { id } = req.params; // Extract the level ID from the request parameters
 
-  // Check if the provided ID is a valid ObjectId
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    return res.status(404).json({ error: "No Such Volunteer Job" }); // If not valid, send a JSON response with status code 404 (Not Found)
-  }
+ // Check if the provided ID is a valid ObjectId
+ if (!mongoose.Types.ObjectId.isValid(id)) {
+  return res.status(404).json({ error: "No Such Volunteer Job" });
+}
+// Find and delete the level by its ID
+const defaultTemModel = await currentModel.findOneAndDelete({ _id: id });
 
-  res.status(200).json(defaultTemModel);
+// If no level is found with the provided ID, return an error
+if (!defaultTemModel) {
+  return res.status(400).json({ error: "No Such Volunteer Job" });
+}
+
+res.status(200).json(defaultTemModel); // Send the deleted level as a JSON response
 };
 
-// update a workout
+// Function to update a level by its ID
 const updateDocument = async (req, res) => {
   const { id } = req.params;
+  // Check if the provided ID is a valid ObjectId
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(404).json({ error: "No Such Workout" });
   }
+  // Find and update the level by its ID
   const defaultTemModel = await currentModel.findByIdAndUpdate(
     { _id: id },
     {
-      ...req.body,
+      ...req.body,// Update the level document with the data from the request body
     },
-    { new: true }
+    { new: true }// Return the updated document
   );
-
+// If no level is found with the provided ID, return an error
   if (!defaultTemModel) {
     return res.status(400).json({ error: "No Such Workout" });
   }
 
-  res.status(200).json(defaultTemModel);
+  res.status(200).json(defaultTemModel); // Send the updated level as a JSON response
+};
 };
 
 module.exports = {
