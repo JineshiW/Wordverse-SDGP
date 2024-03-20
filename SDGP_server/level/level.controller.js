@@ -1,11 +1,13 @@
-//Workout Model imported
+//Workout Model imported // Import the "level" model
 const currentModel = require("./level.model");
-
+// Import the Mongoose library
 const mongoose = require("mongoose");
 
-// get all
+// Function to get all levels
 const getAll = async (req, res) => {
   try {
+     // Retrieve all levels from the database, sorted by createdAt timestamp in descending order
+    // Populate the 'courseID' field to include details of the associated course
     const levels = await currentModel
       .find({})
       .sort({ createdAt: -1 })
