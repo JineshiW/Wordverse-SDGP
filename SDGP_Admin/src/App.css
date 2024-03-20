@@ -1,10 +1,12 @@
+/* Styles for the root element of the application */
 .App {
-  text-align: center;
+  text-align: center; /* Aligns the content of the root element to the center */
 }
 
+/* Styles for the logo of the application */
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Sets the height of the logo to 40% of the viewport height */
+  pointer-events: none; /* Prevents the logo from being the target of pointer events */
 }
 
 @media (prefers-reduced-motion: no-preference) {
