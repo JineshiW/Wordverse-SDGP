@@ -16,26 +16,29 @@
     animation: App-logo-spin infinite 20s linear; /* Applies a spinning animation to the logo */
   }
 }
+/* Styles for the header of the application */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34; /* Sets the background color of the header */
+  min-height: 100vh; /* Sets the minimum height of the header to 100% of the viewport height */
+  display: flex; /* Makes the header a flex container */
+  flex-direction: column; /* Arranges the children of the header in a column */
+  align-items: center; /* Aligns the children of the header along the center horizontally */
+  justify-content: center; /* Aligns the children of the header along the center vertically */
+  font-size: calc(10px + 2vmin); /* Sets the font size of the header */
+  color: white; /* Sets the text color of the header to white */
 }
 
+/* Styles for links within the application */
 .App-link {
-  color: #61dafb;
+  color: #61dafb; /* Sets the color of links to a shade of blue */
 }
 
+/* Keyframes for the logo spinning animation */
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(0deg); /* Specifies the starting rotation angle */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* Specifies the ending rotation angle */
   }
 }
