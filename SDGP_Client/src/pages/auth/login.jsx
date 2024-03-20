@@ -1,19 +1,21 @@
 // import Container from "@/components/Shared/Container";
 import React, { useState } from "react";
 // import Link from "next/link";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import axios from "axios";
+import { useFormik } from "formik"; // Formik is a form library for React
+import * as Yup from "yup"; // Yup is a JavaScript schema builder for value parsing and validation
+import axios from "axios"; 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { useRouter } from "next/router";
 // import { isEmpty } from "@/utils/utils";
 import { Link } from "react-router-dom";
 import { isEmpty } from "../../service/utils";
-import { Container } from "@mui/material";
-import NavbarLogin from "./Navbar";
-import { addAPI } from "../../service/api";
+import { Container } from "@mui/material"; // Material-UI Container component
+import NavbarLogin from "./Navbar"; // Navbar component for login page
+import { addAPI } from "../../service/api"; // API function to add data
 
+
+// Validation schema for login form fields
 const validationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Invalid email address")
@@ -21,18 +23,21 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required("Password is required"),
 });
 
+
+// Login page component
 const LoginPage = () => {
   // const router = useRouter();
 
+  // Function to handle login data submission
   const RegisterData = (obj, resetForm) => {
-    addAPI("auth/login", obj)
+    addAPI("auth/login", obj) // Send login data to the backend API
       .then((resp) => {
         localStorage.setItem("userData", JSON.stringify(resp.data));
         console.log(resp.data, "000000");
         toast.success("Successfully Added!");
         window.location.href = "/";
-        resetForm();
-        setLoading(false);
+        resetForm(); // Reset form fields
+        setLoading(false); // Disable loading state
       })
       .catch((err) => toast.error("Invalid credentials."), setLoading(false));
   };
