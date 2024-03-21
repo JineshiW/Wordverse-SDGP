@@ -92,7 +92,7 @@ export default function Result() {
         </Link>
       </div>
       <div className="progress">
-        <Link className="btn" to={"progress"}>
+        <Link className="btn" to={"http://localhost:3003"}>
           Check Your Achievements
         </Link>
       </div>
