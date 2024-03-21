@@ -1,4 +1,5 @@
 import "./FooterStyle.css"
+import { Link } from "react-router-dom";
 
 const Footer = () =>{
     return(
@@ -51,6 +52,12 @@ const Footer = () =>{
                     <a href ="/">Privacy</a>
                     <a href ="/">Policy</a>
                     <a href ="/">License</a>
+                </div>
+                <div>
+                    <Link to={`http://localhost:3002`} className="btn">
+                        <span class="icon"></span> 
+                        <span class="text"><b>Chat with Me!</b></span>
+                    </Link>
                 </div>
             </div>
 
