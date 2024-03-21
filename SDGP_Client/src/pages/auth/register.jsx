@@ -1,15 +1,17 @@
+// Import necessary modules and components
 import React, { useState } from "react";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import axios from "axios";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { useFormik } from "formik"; // Form handling library
+import * as Yup from "yup"; // Validation library
+import axios from "axios"; // HTTP client library
+import { toast } from "react-toastify"; // Notification library
+import "react-toastify/dist/ReactToastify.css"; 
+import { Link } from "react-router-dom"; // For routing
 import { isEmpty } from "../../service/utils";
 import { Container } from "@mui/material";
-import NavbarLogin from "./Navbar";
-import { addAPI } from "../../service/api";
+import NavbarLogin from "./Navbar"; // Custom navbar component
+import { addAPI } from "../../service/api"; // API service function
 
+// Define validation schema using Yup
 const validationSchema = Yup.object().shape({
   firstName: Yup.string().required("Firstname is required"),
   lastName: Yup.string().required("LastName is required"),
@@ -22,12 +24,30 @@ const validationSchema = Yup.object().shape({
     .oneOf([Yup.ref("password")], "Passwords should match"),
 });
 
+// Define RegisterPage component
 const RegisterPage = () => {
   // const router = useRouter();
 
-  const RegisterData = (obj, resetForm) => {};
+  // Function to handle registration data submission
+  const RegisterData = (obj, resetForm) => {
+    // Call API service function to add user data
+    addAPI("auth", obj)
+      .then((resp) => {
+        // Display success message using toast
+        toast.success("Successfully Registered!");
+        // Redirect to login page after successful registration
+        window.location.href = "/login";
+        // Reset form fields
+        resetForm();
+        // Set loading status to false
+        setLoading(false);
+      })
+      .catch((err) => toast.error("Something went wrong."), setLoading(false));
+  };
 
   const [Loading, setLoading] = useState(false);
+
+  // Form handling using useFormik hook
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -39,6 +59,8 @@ const RegisterPage = () => {
     validationSchema,
     onSubmit: async (values, { resetForm }) => {
       setLoading(true);
+      
+      // Call RegisterData function to handle registration
       RegisterData(values, resetForm);
       // try {
       //   // Perform the API request (replace the URL with your actual API endpoint)
@@ -69,6 +91,8 @@ const RegisterPage = () => {
       // }
     },
   });
+
+   // Return JSX for the RegisterPage component
   return (
     <div className="w-full bg-white rounded-xl">
       <NavbarLogin />
@@ -215,4 +239,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default RegisterPage; // Export RegisterPage component
