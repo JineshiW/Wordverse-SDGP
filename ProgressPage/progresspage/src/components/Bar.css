@@ -1,0 +1,26 @@
+/* Bar.css */
+
+/* Styling for the container holding the progress bar */
+.progress-container {
+    width: 500px;
+    height: 45px; /* Adjust height as needed */
+    background-color: #f0f0f0; /* Background color for the progress container */
+    border-radius: 4px; /* Optional: Rounded corners for the container */
+    margin-bottom: 10px; /* Optional: Adjust spacing */
+    margin-left: 350px;
+}
+
+/* Styling for the progress bar */
+.progress-bar {
+    height: 100%;
+    background-color: hsl(150, 100%, 50%); /* Progress bar color */
+    border-radius: 4px; /* Optional: Rounded corners for the progress bar */
+    transition: width 0.3s ease-in-out; /* Optional: Smooth transition effect */
+}
+
+/* Styling for the progress text */
+.progress-text {
+    font-size: 14px; /* Optional: Adjust font size */
+    color: #333; /* Optional: Text color */
+    margin-top: 5px; /* Optional: Adjust spacing */
+}

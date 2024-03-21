@@ -11,7 +11,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import { addAPI } from "../../service/api";
 
-const validationSchema = Yup.object().shape({
+ const validationSchema = Yup.object().shape({
   newPassword: Yup.string().required("new Password is required"),
   password: Yup.string().required("Password is required"),
   cnewpassword: Yup.string()
