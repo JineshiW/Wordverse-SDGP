@@ -25,21 +25,7 @@ const validationSchema = Yup.object().shape({
 const RegisterPage = () => {
   // const router = useRouter();
 
-  const RegisterData = (obj, resetForm) => {
-    // Call API service function to add user data
-    addAPI("auth", obj)
-      .then((resp) => {
-        // Display success message using toast
-        toast.success("Successfully Added!");
-        // Redirect to login page after successful registration
-        window.location.href = "/login";
-        // Reset form fields
-        resetForm();
-        // Set loading status to false
-        setLoading(false);
-      })
-      .catch((err) => toast.error("Something went wrong."), setLoading(false));
-  };
+  const RegisterData = (obj, resetForm) => {};
 
   const [Loading, setLoading] = useState(false);
   const formik = useFormik({
