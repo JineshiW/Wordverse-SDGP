@@ -1,23 +1,4 @@
-//Workout Model imported
-const currentModel = require("./level.model");
 
-const mongoose = require("mongoose");
-
-// get all
-const getAll = async (req, res) => {
-  try {
-    const levels = await currentModel
-      .find({})
-      .sort({ createdAt: -1 })
-      .populate({
-        path: "courseID",
-        select: "courseName courseID", // Specify the fields you want to retrieve
-      });
-    res.status(200).json(levels);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
 
 // get a single
 const getSingle = async (req, res) => {
