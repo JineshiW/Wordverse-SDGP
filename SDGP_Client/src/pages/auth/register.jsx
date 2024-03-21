@@ -1,13 +1,9 @@
-// import Container from "@/components/Shared/Container";
 import React, { useState } from "react";
-// import Link from "next/link";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import { useRouter } from "next/router";
-// import { isEmpty } from "@/utils/utils";
 import { Link } from "react-router-dom";
 import { isEmpty } from "../../service/utils";
 import { Container } from "@mui/material";
@@ -23,13 +19,27 @@ const validationSchema = Yup.object().shape({
   password: Yup.string().required("Password is required"),
   cpassword: Yup.string()
     .required("Password is required")
-    .oneOf([Yup.ref("password")], "Passwords must match"),
+    .oneOf([Yup.ref("password")], "Passwords should match"),
 });
 
 const RegisterPage = () => {
   // const router = useRouter();
 
-  const RegisterData = (obj, resetForm) => {};
+  const RegisterData = (obj, resetForm) => {
+    // Call API service function to add user data
+    addAPI("auth", obj)
+      .then((resp) => {
+        // Display success message using toast
+        toast.success("Successfully Added!");
+        // Redirect to login page after successful registration
+        window.location.href = "/login";
+        // Reset form fields
+        resetForm();
+        // Set loading status to false
+        setLoading(false);
+      })
+      .catch((err) => toast.error("Something went wrong."), setLoading(false));
+  };
 
   const [Loading, setLoading] = useState(false);
   const formik = useFormik({
