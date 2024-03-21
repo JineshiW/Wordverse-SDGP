@@ -29,16 +29,7 @@ const validationSchema = Yup.object().shape({
 const RegisterPage = () => {
   // const router = useRouter();
 
-  const RegisterData = (obj, resetForm) => {
-    addAPI("auth", obj)
-      .then((resp) => {
-        toast.success("Successfully Added!");
-        window.location.href = "/login";
-        resetForm();
-        setLoading(false);
-      })
-      .catch((err) => toast.error("something went wrong."), setLoading(false));
-  };
+  const RegisterData = (obj, resetForm) => {};
 
   const [Loading, setLoading] = useState(false);
   const formik = useFormik({
