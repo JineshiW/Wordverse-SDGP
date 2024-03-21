@@ -13,32 +13,31 @@ To solve this problem, we a team of 6 members are developing a platform to provi
 
 
 
-## Features currently in development
+## Features of the Project
 
 - Login and SignUp pages:
-Implementing a  secure entry point where users authenticate by providing credentials to access their accounts and a gateway for new users to create accounts, collecting essential information for account creation and platform exploration.
+Implementing a secure entry point where users authenticate by providing credentials to access their accounts and a gateway for new users to create accounts, collecting essential information for account creation and platform exploration.
 
 - Home Page and language selection :
 Implementing the home page, focusing on the learning section to display learning materials
 
-- Levelling System and tasks: 
+- Levelling System and Downloadable reference materials: 
 Including a levelling system where users need to complete a certain number of tasks or goals from one level to proceed to the next level to encourage consistent engagement and learning.
 
 - Quiz system and grading: 
 Implementing the quiz system by creating quizzes, recording user responses, and providing instant feedback.
 
-- Badge System and Progress Page:
-Implementing the badge system and progress page for awarding badges based on user achievements and for users to view their progress.
+- Progress Page:
+Implementing the badge system and progress page based on user achievements and for users to view their progress.
 
-- User notification features:
-Developing the  logic for sending notifications when handling rewards and completing tasks.
-
-- Analytics and Insights:
-Implementing analytics tools to gather data on user engagement, popular learning materials.
+- Language Specific ChatBot:
+The users can chat with a language specific chatbot to clarify doubts through the user's learning journey.
 
 - User Profile generation for each user:
 Users can create profiles with information about their language proficiency and learning goals. They can also add personal interests and hobbies.
 
+- Admin Dashboard:
+The Admins can add courses as well as levels to each course through the admin user interface.
 
  
 
