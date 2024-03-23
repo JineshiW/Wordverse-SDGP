@@ -15,7 +15,7 @@ function Home (){
             title = "Which Language do you want to learn"
             text = "Level up your Language skills through the continuous learning."
             buttonText ="View Courses"
-            url = "/"
+            url = "/service"
             btnClass = "show"
         />
         <Destination />
