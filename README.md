@@ -42,7 +42,7 @@ The Admins can add courses as well as levels to each course through the admin us
 
 ### Program Execution Flow (locally) `npm start`
 
-To run our project your must foloow the following steps in order in your commandline terminal
+To run the platform in your device, you must follow the below steps in order in your commandline terminal
 ```
 - 1 /SDGP_server
 - 2 /quiz-app/server
