@@ -1,49 +1,55 @@
+/* Styling for a flex container with center alignment */
 .flex-center{
-    display: flex;
-    justify-content: center;    
-    flex-direction: column;
-    border: 1px solid #cecece;
-    padding: 3em 4em;
-    gap: 1em;
+    display: flex; /* Making it a flex container */
+    justify-content: center; /* Centering items horizontally */
+    flex-direction: column; /* Aligning items vertically */
+    border: 1px solid #cecece; /* Adding border */
+    padding: 3em 4em; /* Adding padding */
+    gap: 1em; /* Setting gap between items */
 }
 
+/* Styling for flex container inside .container */
 .container .flex{
-    display: flex;
-    justify-content: space-between;
-    
+    display: flex; /* Making it a flex container */
+    justify-content: space-between; /* Distributing items evenly along the main axis */
 }
 
+/* Styling for spans inside .container .flex */
 .container .flex span {
-    font-size: 1.4em;
-    color: #cecece;
+    font-size: 1.4em; /* Setting font size */
+    color: #cecece; /* Setting text color */
 }
 
+/* Styling for spans with class .achive inside .container .flex */
 .container .flex span.achive {
-    font-weight: bold;
-    color: #ff2a66;
-    color: #2aff95;
+    font-weight: bold; /* Making font bold */
+    color: #ff2a66; /* Setting text color */
+    color: #2aff95; /* Setting text color */
 }
 
+/* Styling for tables */
 table {
-    width: 100%;
+    width: 100%; /* Making table width 100% */
 }
 
+/* Styling for table headers */
 .table-header {
-    color: #cecece;
-    font-size: 1.1em;
-    text-align: center;
-    background: #212121;
-    padding: 18px 0;
+    color: #cecece; /* Setting text color */
+    font-size: 1.1em; /* Setting font size */
+    text-align: center; /* Centering text */
+    background: #212121; /* Setting background color */
+    padding: 18px 0; /* Adding padding */
 }
 
+/* Styling for table body */
 .table-body {
-    font-size: 1.1em;
-    text-align: center;
-    /* color: #cecece; */
-    background: #d8d8d8;
-    padding: 18px 0;
+    font-size: 1.1em; /* Setting font size */
+    text-align: center; /* Centering text */
+    background: #d8d8d8; /* Setting background color */
+    padding: 18px 0; /* Adding padding */
 }
 
+/* Styling for table header cells */
 .table-header > tr > td{
-    border: 1px solid #0ddfff;   
+    border: 1px solid #0ddfff; /* Adding border */
 }

@@ -1,51 +1,56 @@
+// Importing necessary hooks from React
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
+// Importing a helper function to fetch data from the server
 import { getServerData } from "../helper/helper"
 
-// import redux actions 
+// Importing Redux actions
 import * as Action from '../redux/questionReducer'
 
-// fetch question hook to fetch api data and set value to store
+// Custom hook to fetch questions from the server
 export const useFetchQuestion =()=>{
-    // creating useDispatch hook function
-    const dispatch =useDispatch();
+    // Initializing useDispatch hook to dispatch actions
+    const dispatch = useDispatch();
+    // State to manage fetching status, API data, and server error
     const [getData, setGetData] = useState({isLoading: false, apiData: [], serverError: null})
 
-    // Creating useEffect hook function
+    // useEffect to handle side effects (like data fetching)
     useEffect(() => {
+        // Set loading state to true when fetching starts
         setGetData(prev => ({...prev, isLoading : true}));
     
-        /** async function fetch backend data */
+        // Async function to fetch data from the server
         (async () => {
             try {
-                // getting data from the backend
+                // Fetching data from the backend server
                 const [{questions,answers}] = await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`, (data)=>data)
-                // console.log({questions,answers})
+                
+                // If questions are available, update state, dispatch action
                 if(questions.length > 0){
                     setGetData(prev => ({...prev, isLoading : false}));
                     setGetData(prev => ({...prev, apiData : questions}));
     
-                    /** dispatch an action */
+                    // Dispatching an action to start the exam with fetched questions and answers
                     dispatch(Action.startExamAction({question :questions,answers}))
                 } else{
+                    // Throw error if no questions are available
                     throw new Error("No Question Avalibale");
                 }
             } catch (error) {
+                // Handle errors and update state accordingly
                 setGetData(prev => ({...prev, isLoading : false}));
                 setGetData(prev => ({...prev, serverError : error}));
             }
         })();
     }, [dispatch]);
     
-
-    
-
+    // Return the state and function to update state
     return [getData, setGetData];
 }
 
-// MoveAction Dispatch Functions
+// Dispatch Functions for Moving Questions
 
-// moveNextQuestion is increasing the tracevalue by 1 to travel forward to next question
+// Action to move to the next question
 export const MoveNextQuestion =()=> async(dispatch)=>{
     try{
         dispatch(Action.moveNextAction())
@@ -54,9 +59,7 @@ export const MoveNextQuestion =()=> async(dispatch)=>{
     }
 }
 
-// PrevAction Dispatch Function
-
-// movePrevQuestion is decreasing the tracevalue by 1 to travel backward to previous question
+// Action to move to the previous question
 export const MovePrevQuestion =()=> async(dispatch)=>{
     try{
         dispatch(Action.movePrevAction())

@@ -1,44 +1,49 @@
-import express from 'express'
-import morgan from 'morgan'
-import cors from 'cors'
-import { config } from 'dotenv'
-import router from './router/route.js'
+// Importing necessary modules
+import express from 'express'; // Importing Express.js framework
+import morgan from 'morgan'; // Importing Morgan for HTTP request logging
+import cors from 'cors'; // Importing Cors for handling Cross-Origin Resource Sharing
+import { config } from 'dotenv'; // Importing config function from dotenv for environment variables
+import router from './router/route.js'; // Importing router from route.js file
 
-// import connection file
-import connect from './database/conn.js'
+// Importing the connect function from the conn.js file for database connection
+import connect from './database/conn.js';
 
-const app= express()
+// Creating an instance of Express application
+const app = express();
 
-// app middleware
-app.use(morgan('tiny'));
-app.use(cors());
-app.use(express.json());
-config();
+// Middleware setup
+app.use(morgan('tiny')); // Setting up Morgan for HTTP request logging
+app.use(cors()); // Setting up CORS middleware for Cross-Origin Resource Sharing
+app.use(express.json()); // Parsing JSON requests
+config(); // Configuring environment variables from .env file
 
-// application port
-const port = process.env.PORT || 8080;
+// Defining the application port
+const port = process.env.PORT || 8080; // Setting the port from environment variable or default to 8080
 
-// routes 
-app.use('/api', router) //Api 
+// Routes setup
+app.use('/api', router); // Setting up routes with the router middleware for API endpoints
 
-app.get('/', (erq,res)=>{
+// Route for handling GET requests to the root URL
+app.get('/', (req, res) => {
     try {
-        res.json("Get Request")
+        // Sending a JSON response for the GET request
+        res.json("Get Request");
     } catch (error) {
-        res.json(error)
+        // Sending an error response if an error occurs
+        res.json(error);
     }
-})
+});
 
-// start server only when we have a valid connection
-connect().then(()=>{
+// Starting the server only when there is a valid database connection
+connect().then(() => {
     try {
-        app.listen(port, ()=>{
-            console.log(`Server connected to http://localhost:${port}`)
-        })
+        // Starting the server to listen on the specified port
+        app.listen(port, () => {
+            console.log(`Server connected to http://localhost:${port}`); // Logging server connection message
+        });
     } catch (error) {
-        console.log("Cannot connect to the server")
+        console.log("Cannot connect to the server"); // Logging error message if server connection fails
     }
-}).catch(error =>{
-    console.log("Invalid Database Connection")
-})
-
+}).catch(error => {
+    console.log("Invalid Database Connection"); // Logging error message if database connection fails
+});

@@ -47,4 +47,5 @@ export default [
     }
 ]
 
+// exporting the correct answers for the questions 
 export const answers =[1,0,2,1,0];

@@ -1,59 +1,74 @@
+/* Styling ordered list items inside the .container */
 .container ol li{
-    font-size: 1.4em;
-    color: #cecece;
+    font-size: 1.4em; /* Setting font size */
+    color: #cecece; /* Setting text color */
 }
 
+/* Styling for elements with classes .start, .quit, and .progress */
 .start, .quit, .progress{
-    display: flex;
-    justify-content: center;
-    padding-top: 20px;
+    display: flex; /* Making elements flex containers */
+    justify-content: center; /* Centering child elements horizontally */
+    padding-top: 20px; /* Adding top padding */
 }
 
+/* Styling for buttons inside elements with class .start */
 .start .btn{
+    /* Common button styles */
     padding: .2em 1.7em;
     border: none;
     border-radius: .1em;
     font-size: 1.2em;
     color: #202020;
     text-decoration: none;
+    /* Background color specific to start button */
     background-color: #25e1de;
 }
 
+/* Styling for buttons inside elements with class .quit */
 .quit .btn{
+    /* Common button styles */
     padding: .2em 1.7em;
     border: none;
     border-radius: .1em;
     font-size: 1.2em;
     color: #202020;
     text-decoration: none;
+    /* Background color specific to quit button */
     background-color: #e13e25;
 }
+
+/* Styling for buttons inside elements with class .progress */
 .progress .btn{
+    /* Common button styles */
     padding: .2em 1.7em;
     border: none;
     border-radius: .1em;
     font-size: 1.2em;
     color: #202020;
     text-decoration: none;
+    /* Background color specific to progress button */
     background-color: #39ff2f;
 }
 
+/* Margin between buttons */
 .quit .btn, 
 .start .btn,
 .progress .btn{
     margin: 0 10px;
 }
 
+/* Styling for form */
 #form{
-    display: flex;
-    justify-content: center;
-    margin-top: 4em;
+    display: flex; /* Making form flex container */
+    justify-content: center; /* Centering form horizontally */
+    margin-top: 4em; /* Adding top margin */
 }
 
+/* Styling for input with class .userid inside form */
 #form .userid{
-    padding: .7em 2em;
-    width: 50%;
-    border: none;
-    border-radius: 3px;
-    font-size: 1em;
+    padding: .7em 2em; /* Adding padding */
+    width: 50%; /* Setting width */
+    border: none; /* Removing border */
+    border-radius: 3px; /* Adding border radius */
+    font-size: 1em; /* Setting font size */
 }
