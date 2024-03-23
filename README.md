@@ -40,7 +40,7 @@ Users can create profiles with information about their language proficiency and 
 - Admin Dashboard:
 The Admins can add courses as well as levels to each course through the admin user interface. 
 
-#### Program Execution Flow (locally) `npm start`
+### Program Execution Flow (locally) `npm start`
 
 To run our project your must foloow the following steps in order in your commandline terminal
 ```
