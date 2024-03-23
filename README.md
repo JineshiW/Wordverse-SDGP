@@ -43,7 +43,7 @@ The Admins can add courses as well as levels to each course through the admin us
 #### Program Execution Flow (locally) `npm start`
 
 To run our project your must foloow the following steps in order in your commandline terminal
-
+```
 - 1 /SDGP_server
 - 2 /quiz-app/server
 - 3 /SDGP_Client               `localhost:3000`
@@ -51,7 +51,7 @@ To run our project your must foloow the following steps in order in your command
 - 5 /ChatBot                   `localhost:3002`
 - 6 /ProgressPage/progresspage `localhost:3003`
 - 7 /SDGP_Admin                `localhost:3004`
-
+```
 ## Team
 
 - [@dilmiBalasooriya](https://github.com/dilmiBalasooriya)
