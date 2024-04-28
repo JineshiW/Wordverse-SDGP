@@ -87,11 +87,11 @@ export default function Result() { // Defining a functional component named Resu
       </div>
       <div className="quit"> {/* Render a div with className 'quit' */}
         {/* Redirect user to a different page */}
-        <Link className="btn" to={"http://localhost:3000/service"}>End Quiz</Link> {/* Render a Link to end the quiz */}
+        <Link className="btn" to={"https://wordverse-sdgp-main-client.vercel.app/service"}>End Quiz</Link> {/* Render a Link to end the quiz */}
       </div>
       <div className="progress"> {/* Render a div with className 'progress' */}
         {/* Redirect user to a different page */}
-        <Link className="btn" to={"http://localhost:3003"}>Check Your Achievements</Link> {/* Render a Link to check achievements */}
+        <Link className="btn" to={"https://wordverse-sdgp-progresspage.vercel.app/"}>Check Your Achievements</Link> {/* Render a Link to check achievements */}
       </div>
 
       <div className="container"> {/* Render a div with className 'container' */}

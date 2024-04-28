@@ -60,7 +60,7 @@ function LevelMatrialCard() {
                         fileName={`testing${parseInt(i) + 1}`}
                         />
                         <div>
-                        <Link to={`http://localhost:3001/mainQuiz`} className="button">Take Quiz</Link>
+                        <Link to={`https://wordverse-sdgp-quiz-app.vercel.app/mainQuiz`} className="button">Take Quiz</Link>
                         </div>
                     </div>
                   ) : null

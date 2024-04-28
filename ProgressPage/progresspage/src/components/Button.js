@@ -6,7 +6,7 @@ function Button() {
 
     function handleClick() {
         setBtnState(btnState => !btnState);
-        window.location.href = 'http://localhost:3000/service'; 
+        window.location.href = 'https://wordverse-sdgp-main-client.vercel.app/service'; 
     }
 
     let continueCheck = btnState ? 'active' : null;
