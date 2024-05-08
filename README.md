@@ -46,11 +46,9 @@ To run the platform in your device, you must follow the below steps in order in 
 ```
 - 1 /SDGP_server
 - 2 /quiz-app/server
-- 3 /SDGP_Client               `localhost:3000`
-- 4 /quiz-app/client           `localhost:3001`
+- 3 /SDGP_Client  
+- 4 /SDGP_Admin                `localhost:3001`                       
 - 5 /ChatBot                   `localhost:3002`
-- 6 /ProgressPage/progresspage `localhost:3003`
-- 7 /SDGP_Admin                `localhost:3004`
 ```
 ## Team
 
