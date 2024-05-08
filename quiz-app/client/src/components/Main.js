@@ -48,7 +48,7 @@ export default function Main() {
             
             {/* Link to end the quiz */}
             <div className='quit'>
-                <Link className='btn' to={'http://localhost:3000/service'}> End Quiz</Link>
+                <Link className='btn' to={'https://wordverse-sdgp-main-client.vercel.app/service'}> End Quiz</Link>
             </div>
         </div>
     );
